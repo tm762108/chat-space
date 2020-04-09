@@ -1,0 +1,27 @@
+%html 
+%head
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>chat-app</title>
+
+%body
+  %div.side_bar
+    %div.side_bar__user_name
+      %div.side_bar__user_name__index
+        %div.side_bar__user_name__index__left_content
+          masa
+        %div.side_bar__user_name__index__right_content
+          %div.side_bar__user_name__index__right_content__edit_btn
+          =link_to "#", class: "side_bar__user_name__index__right_content__edit_btn" do
+            =icon('far', 'edit', class: "contents__btn--icon")
+          %div.side_bar__user_name__index__right_content__config_btn
+          =link_to "#", class: "side_bar__user_name__index__right_content__config_btn" do
+            =icon('fas', 'cog', class: "contents__btn--icon")
+    %div.side_bar__member
+      %div.side_bar__member__group_list
+        techcamp
+      %div.side_bar__member__group_message
+        まだメッセージはありません
