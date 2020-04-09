@@ -2,10 +2,7 @@
   box-sizing: border-box;
 }
 
-$standard-white: #ffffff;
-$standard-blue: #38aef0;
-$header-height: 100px;
-$side_bar-width: 300px;
+@import "variables.scss";
 
 .side_bar {
   width: $side_bar-width;

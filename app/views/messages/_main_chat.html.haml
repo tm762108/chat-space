@@ -1,28 +1,28 @@
-%div.main_chat
-  %div.main_chat__header
-    %div.main_chat__header__left_content
-      %div.main_chat__header__left_content__group_name
+.main_chat
+  .main_chat__header
+    .main_chat__header__left_content
+      .main_chat__header__left_content__group_name
         test
-      %div.main_chat__header__left_content__member_list
+      .main_chat__header__left_content__member_list
         Member:masa
-    %div.main_chat__header__edit_btn
+    .main_chat__header__edit_btn
       = link_to "#", class: "contents__btn" do
         Edit
-  %div.main_chat__middle
-    %div.main_chat__middle__message_box
-      %div.main_chat__middle__message_box__upper_info
-        %div.main_chat__middle__message_box__upper_info__member_name
+  .main_chat__middle
+    .main_chat__middle__message_box
+      .main_chat__middle__message_box__upper_info
+        .main_chat__middle__message_box__upper_info__member_name
           masa
-        %div.main_chat__middle__message_box__upper_info__update_time
+        .main_chat__middle__message_box__upper_info__update_time
           2019/11/20(Wed)
-      %div.main_chat__middle__message_box__member_message
+      .main_chat__middle__message_box__member_message
         おはよう！
-  %div.main_chat__bottom
-    %div.main_chat__bottom__form
-      %div.main_chat__bottom__form__input
+  .main_chat__bottom
+    .main_chat__bottom__form
+      .main_chat__bottom__form__input
         %input{type: "text", class:"main_chat__bottom__form__input__text", placeholder:"type a message"}
         %label{class: "main_chat__bottom__form__input__image"}
           =icon('fas', 'image')
           %input{type: "file", class: "main_chat__bottom__form__input__image__file"}
-      %div.main_chat__bottom__form__send_btn
+      .main_chat__bottom__form__send_btn
         Send
