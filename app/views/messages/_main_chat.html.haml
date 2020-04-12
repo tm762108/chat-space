@@ -1,0 +1,28 @@
+.main_chat
+  .main_chat__header
+    .main_chat__header__left_content
+      .main_chat__header__left_content__group_name
+        test
+      .main_chat__header__left_content__member_list
+        Member:masa
+    .main_chat__header__edit_btn
+      = link_to "#", class: "contents__btn" do
+        Edit
+  .main_chat__middle
+    .main_chat__middle__message_box
+      .main_chat__middle__message_box__upper_info
+        .main_chat__middle__message_box__upper_info__member_name
+          masa
+        .main_chat__middle__message_box__upper_info__update_time
+          2019/11/20(Wed)
+      .main_chat__middle__message_box__member_message
+        おはよう！
+  .main_chat__bottom
+    .main_chat__bottom__form
+      .main_chat__bottom__form__input
+        %input{type: "text", class:"main_chat__bottom__form__input__text", placeholder:"type a message"}
+        %label{class: "main_chat__bottom__form__input__image"}
+          =icon('fas', 'image')
+          %input{type: "file", class: "main_chat__bottom__form__input__image__file"}
+      .main_chat__bottom__form__send_btn
+        Send
