@@ -5,13 +5,17 @@
       =current_user.name
       .side_bar__user_name__index__right_content
         .side_bar__user_name__index__right_content__edit_btn
-        =link_to "#", class: "side_bar__user_name__index__right_content__edit_btn" do
+        =link_to new_group_path do
           =icon('far', 'edit', class: "contents__btn--icon")
         .side_bar__user_name__index__right_content__config_btn
         =link_to edit_user_path(current_user) do
           =icon('fas', 'cog', class: "contents__btn--icon")
   .side_bar__member
     .side_bar__member__group_list
-      techcamp
-    .side_bar__member__group_message
-      まだメッセージはありません
+      - current_user.groups.each do |group|
+        .group
+          = link_to "#" do
+            .group__name
+              = group.name
+            .group_message
+              まだメッセージはありません
