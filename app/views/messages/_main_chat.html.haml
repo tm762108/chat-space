@@ -2,27 +2,22 @@
   .main_chat__header
     .main_chat__header__left_content
       .main_chat__header__left_content__group_name
-        test
+        = user.group.name
       .main_chat__header__left_content__member_list
         Member:masa
     .main_chat__header__edit_btn
-      = link_to edit_group_path do
+      = link_to edit_group_path(@group) do
         Edit
   .main_chat__middle
     .main_chat__middle__message_box
-      .main_chat__middle__message_box__upper_info
-        .main_chat__middle__message_box__upper_info__member_name
-          masa
-        .main_chat__middle__message_box__upper_info__update_time
-          2019/11/20(Wed)
-      .main_chat__middle__message_box__member_message
-        おはよう！
+      = render @messages
   .main_chat__bottom
     .main_chat__bottom__form
       .main_chat__bottom__form__input
-        %input{type: "text", class:"main_chat__bottom__form__input__text", placeholder:"type a message"}
-        %label{class: "main_chat__bottom__form__input__image"}
-          =icon('fas', 'image')
-          %input{type: "file", class: "main_chat__bottom__form__input__image__file"}
-      .main_chat__bottom__form__send_btn
-        Send
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'main_chat__bottom__form__input__text', placeholder: 'type a message'
+          .main_chat__bottom__form__input__image
+            = f.label :image, class: 'main_chat__bottom__form__input__image__file' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'main_chat__bottom__form__send_btn'
