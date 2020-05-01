@@ -160,7 +160,6 @@
             right: 10px;
             line-height: 50px;
             &__file{
-              display: none;
             }
           }
         }
@@ -170,8 +169,6 @@
           line-height: 50px;
           width: 100px;
           height: 50px;
-          position: absolute;
-          right: 40px;
           background-color: $standard-blue;
         }
       }
