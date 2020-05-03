@@ -4,13 +4,19 @@
       .main_chat__header__left_content__group_name
         = user.group.name
       .main_chat__header__left_content__member_list
+<<<<<<< Updated upstream
         Member:masa
+=======
+        - @group.users.each do |user|
+          = user.name
+>>>>>>> Stashed changes
     .main_chat__header__edit_btn
       = link_to edit_group_path(@group) do
         Edit
   .main_chat__middle
-    .main_chat__middle__message_box
-      = render @messages
+    = render @messages
+    -# .main_chat__middle__message_box
+      
   .main_chat__bottom
     .main_chat__bottom__form
       .main_chat__bottom__form__input

@@ -160,7 +160,13 @@
             right: 10px;
             line-height: 50px;
             &__file{
+<<<<<<< Updated upstream
               display: none;
+=======
+              .hidden{
+                display: none;
+              }
+>>>>>>> Stashed changes
             }
           }
         }
