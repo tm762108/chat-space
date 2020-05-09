@@ -113,6 +113,7 @@
   &__middle{
     background-color: #fafafa;
     height: calc(100vh - #{$header-height} - 90px);
+    overflow: scroll;
     &__message_box{
       position: relative;
       padding-top: 35px;
@@ -157,16 +158,13 @@
           }
           &__image{
             position: absolute;
-            right: 10px;
+            top: 0;
+            right: 130px;
             line-height: 50px;
             &__file{
-<<<<<<< Updated upstream
-              display: none;
-=======
               .hidden{
                 display: none;
               }
->>>>>>> Stashed changes
             }
           }
         }
@@ -176,8 +174,6 @@
           line-height: 50px;
           width: 100px;
           height: 50px;
-          position: absolute;
-          right: 40px;
           background-color: $standard-blue;
         }
       }
