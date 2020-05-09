@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = @group.messages.new(message_params)
+    # binding.pry
     if @message.save
       respond_to do |format|
         format.json

@@ -113,6 +113,7 @@
   &__middle{
     background-color: #fafafa;
     height: calc(100vh - #{$header-height} - 90px);
+    overflow: scroll;
     &__message_box{
       position: relative;
       padding-top: 35px;
@@ -157,9 +158,13 @@
           }
           &__image{
             position: absolute;
-            right: 10px;
+            top: 0;
+            right: 130px;
             line-height: 50px;
             &__file{
+              .hidden{
+                display: none;
+              }
             }
           }
         }
