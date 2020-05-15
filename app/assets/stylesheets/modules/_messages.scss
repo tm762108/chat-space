@@ -32,6 +32,9 @@
         width: 60px;
         height: 20px;
         display: flex;
+        a{
+          color: white;
+        }
         &__edit_btn{
           color: $standard-white;
         }
@@ -54,7 +57,8 @@
       top: 20px;
       left: 20px;
       a{
-        color: white
+        color: white;
+        text-decoration: none;
       }
 
     }
@@ -75,7 +79,8 @@
   position: relative;
   &__header{
     height: $header-height;
-    background-color: #eeeeee;
+    background-color: #ffffff;
+    border-bottom: solid 1px #eee;
     position: relative;
     display: flex;
     &__left_content{
@@ -113,6 +118,7 @@
   &__middle{
     background-color: #fafafa;
     height: calc(100vh - #{$header-height} - 90px);
+    padding: 46px 40px;
     overflow: scroll;
     &__message_box{
       position: relative;
@@ -125,7 +131,7 @@
           font-size: 16px;
           color: #333333;
         }
-        &__update_time{
+      r  &__update_time{
           font-size: 12px;
           color:#999999;
           margin-left: 10px;
@@ -139,43 +145,51 @@
     }
   }
   &__bottom{
+    width: 100%;
     height: 90px;
     background-color: #d2d2d2;
     display: flex;
+    padding: 20px 40px;
     align-items: center;
     bottom: 0;
       &__form{
+        width: 100%;
         display: flex;
         align-items: center;
         height: 50px;
         left: 10px;
         &__input{
-          position: relative;
-          display: flex;
-          &__text{
-            height: 50px;
-            width: calc(100vw - #{$side_bar-width} - 100px - 40px - 15px);
-          }
-          &__image{
-            position: absolute;
-            top: 0;
-            right: 130px;
-            line-height: 50px;
-            &__file{
+          width: 100%;
+          .new_message{
+            width: 100%;
+            position: relative;
+            display: flex;
+            .main_chat__bottom__form__input__text{
+              height: 50px;
+              width: calc(100% - 115px);
+              padding: 0 40px 0 10px;
+            }
+            .main_chat__bottom__form__input__image{
+              position: absolute;
+              top: 0;
+              right: 130px;
+              line-height: 50px;
               .hidden{
                 display: none;
               }
             }
+            .main_chat__bottom__form__send_btn{
+              color: $standard-white;
+              text-align: center;
+              line-height: 50px;
+              width: 100px;
+              height: 50px;
+              background-color: $standard-blue;
+              position: absolute;
+              right: 0;
+            }
           }
         }
-        &__send_btn{
-          color: $standard-white;
-          text-align: center;
-          line-height: 50px;
-          width: 100px;
-          height: 50px;
-          background-color: $standard-blue;
-        }
+  }
       }
   }
-}
